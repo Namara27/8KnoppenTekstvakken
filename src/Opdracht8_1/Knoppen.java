@@ -14,6 +14,7 @@ public class Knoppen extends Applet {
     public void init() {
         tekstvak = new TextField("",20);
         label = new Label("Type iets zinnigs in dit vakje");
+        text = "";
         //Ok button
         ok = new Button("Ok");
         OkListener ol = new OkListener();
@@ -41,6 +42,7 @@ public class Knoppen extends Applet {
     }
     class ResetListener implements ActionListener {
         public void actionPerformed( ActionEvent e) {
+            tekstvak.setText("");
             text = "";
             repaint();
         }
