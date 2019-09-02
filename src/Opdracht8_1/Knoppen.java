@@ -1,4 +1,45 @@
 package Opdracht8_1;
 
-public class Knoppen {
+import java.awt.*;
+import java.applet.*;
+import java.awt.event.*;
+
+public class Knoppen extends Applet {
+    TextField tekstvak;
+    Label label;
+    Button ok;
+    Button reset;
+    String text;
+
+    public void init() {
+        tekstvak = new TextField("",20);
+        label = new Label("Type iets zinnigs in dit vakje");
+        ok = new Button("Ok");
+        OkListener ol = new OkListener();
+        ok.addActionListener( ol );
+        reset = new Button("Reset");
+        ResetListener rl = new ResetListener();
+        reset.addActionListener( rl );
+        add(label);
+        add(tekstvak);
+        add(ok);
+        add(reset);
+    }
+
+    public void  paint(Graphics g) {
+        g.drawString(text,50,50);
+    }
+
+    class OkListener implements ActionListener {
+        public void actionPerformed( ActionEvent e) {
+            text = tekstvak.getText();
+            repaint();
+        }
+    }
+    class ResetListener implements ActionListener {
+        public void actionPerformed( ActionEvent e) {
+            text = "";
+            repaint();
+        }
+    }
 }
