@@ -5,15 +5,8 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class Aantal extends Applet {
-    Button Bman;
-    Button Bvrouw;
-    Button Lman;
-    Button Lvrouw;
-    int aantal1;
-    int aantal2;
-    int aantal3;
-    int aantal4;
-    int totaal;
+    Button Bman, Bvrouw, Lman, Lvrouw;
+    int aantal1, aantal2, aantal3, aantal4, totaal;
 
     public void init() {
         //Bezoekers Man
