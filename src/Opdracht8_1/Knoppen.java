@@ -14,12 +14,15 @@ public class Knoppen extends Applet {
     public void init() {
         tekstvak = new TextField("",20);
         label = new Label("Type iets zinnigs in dit vakje");
+        //Ok button
         ok = new Button("Ok");
         OkListener ol = new OkListener();
         ok.addActionListener( ol );
+        //Reset button
         reset = new Button("Reset");
         ResetListener rl = new ResetListener();
         reset.addActionListener( rl );
+        //Buttons
         add(label);
         add(tekstvak);
         add(ok);
