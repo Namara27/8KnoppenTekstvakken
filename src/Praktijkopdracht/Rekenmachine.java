@@ -65,6 +65,7 @@ public class Rekenmachine extends Applet {
             totaal1 = antwoord1 / antwoord2;
             tekstvak1.setText(String.valueOf(totaal1));
             tekstvak2.setText(reset);
+            repaint();
         }
     }
 
@@ -77,6 +78,7 @@ public class Rekenmachine extends Applet {
             totaal1 = antwoord1 + antwoord2;
             tekstvak1.setText(String.valueOf(totaal1));
             tekstvak2.setText(reset);
+            repaint();
         }
     }
 
@@ -89,6 +91,7 @@ public class Rekenmachine extends Applet {
             totaal1 = antwoord1 - antwoord2;
             tekstvak1.setText(String.valueOf(totaal1));
             tekstvak2.setText(reset);
+            repaint();
         }
     }
 }
